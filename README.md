@@ -1,24 +1,57 @@
-# json-server-base
+# MemoriCards API
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
+<a href= "https://insomnia.rest/run/?label=memori-cards-api&uri=https%3A%2F%2Fmemori-cards-api.onrender.com" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
-## Endpoints
+<blockquote> Para importar o JSON no Insomnia é só clicar no botão "Run in Insomnia".
+</blockquote>
+<br>
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+A url base da API é https://memori-cards-api.onrender.com
 
-### Cadastro
+## Endpoints que não necessitam de token
+
+### Cadastro de usuário
+
+`POST /signup - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "email": "kenzinho2@mail.com",
+  "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm",
+  "image": "",
+  "username": "teste",
+  "id": 1,
+}
+```
 
 POST /register <br/>
 POST /signup <br/>
 POST /users
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
-
+<br>
 
 ### Login
+
+`POST /signin - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "email": "kenzinho2@mail.com",
+  "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm",
+}
+```
 
 POST /login <br/>
 POST /signin
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+## Endpoints que necessitam de token
+
+### Cards
+
+`GET /flashcards - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  Em construção...
+}
+```
