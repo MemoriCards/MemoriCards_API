@@ -17,18 +17,9 @@ A url base da API é https://memori-cards-api.onrender.com
 ```json
 {
   "email": "kenzinho2@mail.com",
-  "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm",
-  "image": "",
-  "username": "teste",
-  "id": 1,
+  "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm"
 }
 ```
-
-POST /register <br/>
-POST /signup <br/>
-POST /users
-
-<br>
 
 ### Login
 
@@ -41,17 +32,54 @@ POST /users
 }
 ```
 
-POST /login <br/>
-POST /signin
-
 ## Endpoints que necessitam de token
 
-### Cards
+### Flashcards
 
-`GET /flashcards - FORMATO DA REQUISIÇÃO`
+`GET /flashcards/:userId - FORMATO DA REQUISIÇÃO`
+
+```json
+[
+ {
+   "question": "Qual é a formulada água?",
+   "answer": "H2O",
+   "id": 1
+ },
+ {
+   "question": "Qual é a capital do japão?",
+   "answer": "Tokyo",
+   "id": 2
+ }
+ 
+   {...}
+]
+```
+###  Criar Flashcards
+
+`POST /flashcards/:Id - FORMATO DA REQUISIÇÃO`
 
 ```json
 {
-  Em construção...
+  "question": "Qual é a formulada água?",
+  "answer": "H2O",
+}
+```
+
+###  Excluir Flashcards
+
+`DELETE /flashcards/:Id - FORMATO DA REQUISIÇÃO`
+
+```
+  Não é necessário um corpo da requisição.
+```
+
+###  Editar Flashcards
+
+`PATCH /flashcards/:Id - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "question": "Qual é a formulada água?",
+  "answer": "H2O",
 }
 ```
