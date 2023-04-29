@@ -36,7 +36,7 @@ A url base da API é https://memori-cards-api.onrender.com
 
 ### Flashcards
 
-`GET /flashcards/:userId - FORMATO DA REQUISIÇÃO`
+`GET /users/:usersId:?_embed=flashcards - FORMATO DA REQUISIÇÃO`
 
 ```json
 [
