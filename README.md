@@ -1,11 +1,5 @@
 # MemoriCards API
 
-<a href= "https://insomnia.rest/run/?label=memori-cards-api&uri=https%3A%2F%2Fmemori-cards-api.onrender.com" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
-
-<blockquote> Para importar o JSON no Insomnia é só clicar no botão "Run in Insomnia".
-</blockquote>
-<br>
-
 A url base da API é https://memori-cards-api.onrender.com
 
 ## Endpoints que não necessitam de token
@@ -34,7 +28,15 @@ A url base da API é https://memori-cards-api.onrender.com
 
 ## Endpoints que necessitam de token
 
-### Flashcards
+### AutoLogin
+
+`GET /users/:usersId: - FORMATO DA REQUISIÇÃO`
+
+```
+Não é necessário um corpo da requisição.
+```
+
+### Busca todos os flashcards do usuário logado
 
 `GET /users/:usersId:?_embed=flashcards - FORMATO DA REQUISIÇÃO`
 
@@ -53,6 +55,14 @@ A url base da API é https://memori-cards-api.onrender.com
  
    {...}
 ]
+```
+
+### Busca flashcards por id
+
+`GET /flashcards/:id: - FORMATO DA REQUISIÇÃO`
+
+``` 
+Não é necessário um corpo da requisição.
 ```
 ###  Criar Flashcards
 
